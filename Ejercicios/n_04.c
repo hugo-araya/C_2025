@@ -4,7 +4,9 @@ int potencia(int, int);
 
 int main(){
     int base, exponente, resultado;
+
     printf("Base: ");
+
     scanf("%d", &base);
     printf("Exponente: ");
     scanf("%d", &exponente);
@@ -14,11 +16,17 @@ int main(){
 }
 
 int potencia(int a, int b){
-    int pot, i;
+    int pot, i, pot1, j;
     i = 0;
-    pot = a;
+    //pot = a;
+    pot1 = a;
     while (i < b){
-        pot = a + pot;
+        j = 0;
+        while (j <= i){
+            pot1 = a + pot1;
+            j++;
+        }
+        //pot = pot + pot1;
         i++;
     }
     return pot;
